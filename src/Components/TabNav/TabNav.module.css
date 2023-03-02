@@ -1,0 +1,55 @@
+.title {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  font-size: 20px;
+}
+.title2 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 20px;
+  text-align: center;
+}
+.titleContainer {
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.navcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.folderTab {
+  padding-top: 20px;
+  text-align: center;
+  position: relative;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 90px;
+}
+.folderTabContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.folderTab:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.folderTab:hover .folderTabLabel {
+  background-color: #999;
+  color: #fff;
+}
+
+.folderTab:hover .folderTabContent {
+  display: block;
+}

@@ -1,0 +1,159 @@
+.signUp_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  font-family: "Poppins";
+}
+.signUp_label {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  color: var(--secondary-color);
+}
+.signUp_label2 {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+}
+.signUp_buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUp_input {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  width: 320px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.signUp_input:placeholder {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  width: 320px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+
+.signUp_error {
+  color: #9f0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20px;
+}
+.signUp_error2 {
+  color: #9f0000;
+}
+
+.signUp_forgot {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 36px;
+  width: 320px;
+  color: black;
+  text-decoration: underline;
+  align-self: flex-end;
+  height: 28px;
+  color: var(--secondary-color);
+}
+
+.signUp_forgot:hover {
+  cursor: pointer;
+  color: yellow;
+}
+
+.signUp_formForgot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+}
+.signUpComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 300px);
+}
+
+.title {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  font-size: 24px;
+}
+.title2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+  flex-direction: row-reverse;
+  font-size: 24px;
+}
+.titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 380px) {
+  .signUp_input {
+    width: 250px;
+  }
+  .signUp_label {
+    width: 60px;
+  }
+}
