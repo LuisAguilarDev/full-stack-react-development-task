@@ -61,15 +61,6 @@ export const SignUp = () => {
         setErrorP({ ...errorP, error: false });
         return;
       }
-      console.log({
-        ...errorP,
-        error: true,
-        length: evt.target.value.length < 8,
-        uppercase: !/[A-Z]/.test(evt.target.value),
-        lowercase: !/[a-z]/.test(evt.target.value),
-        numeric: !/\d/.test(evt.target.value),
-        special: !/[@$!%*?&]/.test(evt.target.value),
-      });
       setErrorP({
         ...errorP,
         error: true,
@@ -117,7 +108,6 @@ export const SignUp = () => {
                   onChange={handleChange}
                   type="password"
                   placeholder="********"
-                  autoComplete="On"
                 />
               </div>
               {errorP.error ? (
@@ -192,7 +182,7 @@ export const SignUp = () => {
                   }}
                   variant="outlined"
                   onClick={() => {
-                    console.log("hola");
+                    handleSignUp();
                   }}
                 >
                   Create your account

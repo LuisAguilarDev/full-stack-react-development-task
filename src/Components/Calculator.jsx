@@ -17,14 +17,14 @@ export const Calculator = () => {
   }
   async function getSolution() {
     const url = `https://calculatortemprepository.herokuapp.com/calculate/${a}/${b}/${text}`;
-    let answer = await fetch(url, { mode: "no-cors" })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
-    setResult(answer);
+    let answer = await fetch(url);
+    let parsed = await answer.json();
+    setResult(parsed);
+    setShow(true);
   }
   return (
     <div className="APPFUNCTION">
-      <div className="TEXT">Selecciona una operación:</div>
+      <div className="TEXT">Select Operation:</div>
       <div className="FLEX">
         <input
           className="INPUT"
@@ -49,9 +49,9 @@ export const Calculator = () => {
           onChange={(e) => setB(e.target.value)}
           type="number"
         />
-        <button onClick={() => getSolution()}>CALCULAR </button>
+        <button onClick={() => getSolution()}>CALCULATE </button>
       </div>
-      {show ? <div className="TEXT">Resultado: {result}</div> : null}
+      {show ? <div className="TEXT">Result: {result}</div> : null}
     </div>
   );
 };

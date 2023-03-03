@@ -17,7 +17,7 @@ export const Notification = () => {
           marginTop: "0px",
           width: "420px",
           fontSize: "60px",
-          ":hover": { color: "red", borderColor: "red", background: "red" },
+          ":hover": { color: "#ff9e9e", borderColor: "red", background: "red" },
         }}
         variant="outlined"
         onClick={(e) => {

@@ -8,7 +8,7 @@
 }
 .title2 {
   margin: 0;
-  color: var(--secondary-color);
+  color: white;
   font-size: 20px;
   text-align: center;
 }
@@ -23,33 +23,39 @@
 .navcontainer {
   display: flex;
   justify-content: space-between;
+  background-color: var(--secondary-color);
 }
 
 .folderTab {
   padding-top: 20px;
   text-align: center;
   position: relative;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 90px;
+  color: white;
+  cursor: pointer;
 }
 .folderTabContainer {
   display: flex;
-  gap: 12px;
+  gap: 14px;
 }
 
 .folderTab:hover {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: rgb(255, 238, 0);
 }
 
-.folderTab:hover .folderTabLabel {
-  background-color: #999;
-  color: #fff;
+.MainContenContainer {
+  margin-top: 16px;
 }
-
-.folderTab:hover .folderTabContent {
-  display: block;
+.center {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 120px);
+}
+.WelcomeText {
+  color: white;
+  font-size: 50px;
 }

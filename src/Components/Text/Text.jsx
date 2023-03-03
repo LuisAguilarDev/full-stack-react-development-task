@@ -73,7 +73,9 @@ export const Text = (props) => {
         {data.map((i) => {
           return (
             <div key={i.id} id={i.id} className={css.card}>
-              <div className={css.cardText}>{i.text}</div>
+              <div className={css.center}>
+                <div className={css.cardText}>{i.text}</div>
+              </div>
             </div>
           );
         })}

@@ -1,6 +1,7 @@
 .dropzoneDiv {
-  width: 600px;
-  height: 400px;
+  width: calc(100% - 32px);
+  height: calc(100vh - 190px);
+  margin: 16px;
   border: 8px white;
   border-style: dashed solid;
 }
@@ -13,17 +14,71 @@
   padding-top: 40px;
 }
 .imageContainer {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
-  overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 8px;
   padding: 8px;
-  width: 250px;
+  width: 1 20px;
+  background-color: white;
+  object-fit: fill;
 }
 
-.imageContainer img {
-  width: 100%;
-  height: auto;
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+}
+.grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-auto-rows: 150px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+  grid-gap: 10px;
+}
+.capture {
+  z-index: 9999999;
+}
+.display {
+  display: none;
+}
+
+.cameraDisplay {
+  position: fixed;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+
+.grid2 {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.disableBE {
   display: block;
+}
+.dropzoneContent {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+.centerMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dropzoneContent {
+  color: white;
+  font-size: 24px;
 }

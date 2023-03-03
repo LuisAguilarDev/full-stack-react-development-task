@@ -88,10 +88,17 @@ export const TabNav = () => {
           <div className={css.title}>{name}</div>
         </div>
       </nav>
-      {route === "Notification screen" ? <Notification /> : null}
-      {route === "Photo screen" ? <PhotoDropZone /> : null}
-      {route === "Text screen" ? <Text user={user} /> : null}
-      {route === "Calculator screen" ? <Calculator /> : null}
+      <div className={css.MainContenContainer}>
+        {route === "" ? (
+          <div className={css.center}>
+            <div className={css.WelcomeText}> Welcome</div>
+          </div>
+        ) : null}
+        {route === "Notification screen" ? <Notification /> : null}
+        {route === "Photo screen" ? <PhotoDropZone /> : null}
+        {route === "Text screen" ? <Text user={user} /> : null}
+        {route === "Calculator screen" ? <Calculator /> : null}
+      </div>
     </>
   );
 };

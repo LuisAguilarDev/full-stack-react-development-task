@@ -363,12 +363,13 @@ body > * {
   font-family: "Roboto", sans-serif;
 }
 :root {
-  --secondary-color: #4169e1;
+  --secondary-color: #253870;
   --primary-color: #87ceeb;
 }
 .active {
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: white;
+  color: var(--secondary-color) !important;
+  cursor: auto !important;
 }
 .APPFUNCTION {
   padding-top: 50px;
