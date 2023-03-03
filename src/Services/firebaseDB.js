@@ -1,6 +1,7 @@
-import { useState } from "react";
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+
 const firebaseConfig = {
   apiKey: "AIzaSyDUtBk_vILVfaZ61XGP-WrXocqEeJfwhkg",
   authDomain: "tempfiles-7226b.firebaseapp.com",
@@ -10,10 +11,7 @@ const firebaseConfig = {
   appId: "1:678941564362:web:15df0a2ece7076dd934333",
   measurementId: "G-VN3BSPJ14M",
 };
-export const appFirebase = initializeApp(firebaseConfig);
-const analytics = getAnalytics(appFirebase);
 
-export const Photo = () => {
-  const [route, setRoute] = useState("");
-  return <>Photo</>;
-};
+const app = initializeApp(firebaseConfig);
+export const storage = getStorage(app);
+export const db = getFirestore();

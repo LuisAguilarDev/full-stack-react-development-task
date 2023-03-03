@@ -17,13 +17,5 @@ export function useLocalStorage(key, initialValue) {
       console.log(error);
     }
   };
-  const getValue = (key) => {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      return setValue("");
-    }
-  };
-  return [storedValue, setValue, getValue];
+  return [storedValue, setValue];
 }

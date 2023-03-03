@@ -411,3 +411,10 @@ button {
   font-size: 18px;
   justify-content: center;
 }
+.image-container {
+  width: 300px;
+  height: 300px;
+}
+.image-container > img {
+  width: 100%;
+}

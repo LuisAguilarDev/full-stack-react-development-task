@@ -6,20 +6,6 @@ export const Calculator = () => {
   const [b, setB] = useState("");
   const [text, setText] = useState("+");
   const [show, setShow] = useState(false);
-  function operator(text, a, b) {
-    if (a === "") a = 1;
-    if (b === "") b = 1;
-    setShow(true);
-    if (text === "+") {
-      return setResult(parseInt(a) + parseInt(b));
-    }
-    if (text === "-") {
-      return setResult(parseInt(a) - parseInt(b));
-    }
-    if (text === "*") {
-      return setResult(parseInt(a) * parseInt(b));
-    }
-  }
 
   function handleChange(e) {
     if (e.target.name === "a") {
@@ -28,6 +14,13 @@ export const Calculator = () => {
     if (e.target.name === "b") {
       return setB(e.target.value);
     }
+  }
+  async function getSolution() {
+    const url = `https://calculatortemprepository.herokuapp.com/calculate/${a}/${b}/${text}`;
+    let answer = await fetch(url, { mode: "no-cors" })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+    setResult(answer);
   }
   return (
     <div className="APPFUNCTION">
@@ -56,7 +49,7 @@ export const Calculator = () => {
           onChange={(e) => setB(e.target.value)}
           type="number"
         />
-        <button onClick={() => operator(text, a, b)}>CALCULAR </button>
+        <button onClick={() => getSolution()}>CALCULAR </button>
       </div>
       {show ? <div className="TEXT">Resultado: {result}</div> : null}
     </div>

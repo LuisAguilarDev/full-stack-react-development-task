@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 import { Notification } from "../Notification/Notification";
-import { Photo } from "../Photo";
-import { Text } from "../Text";
+import { PhotoDropZone } from "../Photo/Photo";
+import { Text } from "../Text/Text.jsx";
 import { Calculator } from "../Calculator";
 import { useLocalStorage } from "../../CustomHooks/useLocalStorage";
 
@@ -10,17 +10,17 @@ import css from "./TabNav.module.css";
 
 export const TabNav = () => {
   useEffect(() => {
-    let temp = getUser("user");
+    console.log("useEffectTab");
+    let temp = user;
     setName(temp.username.split("@")[0].toUpperCase());
   }, []);
   const [route, setRoute] = useState("");
-  const [user, setUser, getUser] = useLocalStorage("user");
+  const [user, setUser] = useLocalStorage("user");
   const [name, setName] = useState("");
 
   function handleClick(evt) {
     const { innerHTML } = evt.target;
     setRoute(innerHTML);
-    console.log("click", route, innerHTML);
   }
 
   return (
@@ -89,8 +89,8 @@ export const TabNav = () => {
         </div>
       </nav>
       {route === "Notification screen" ? <Notification /> : null}
-      {route === "Photo screen" ? <Photo /> : null}
-      {route === "Text screen" ? <Text /> : null}
+      {route === "Photo screen" ? <PhotoDropZone /> : null}
+      {route === "Text screen" ? <Text user={user} /> : null}
       {route === "Calculator screen" ? <Calculator /> : null}
     </>
   );

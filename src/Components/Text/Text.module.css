@@ -1,0 +1,66 @@
+.signUp_input {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  width: 240px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.signUp_input:placeholder {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+
+.textForm {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 10px;
+  border: white solid 2px;
+  width: 150px;
+  margin: 8px;
+}
+
+.cardText {
+  font-size: 18px;
+  color: #444444;
+  line-height: 1.5;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+}

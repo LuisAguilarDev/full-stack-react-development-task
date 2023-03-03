@@ -13,7 +13,7 @@ export const SignUp = () => {
     }, 2600);
   }, []);
 
-  const [user, setUser, getUser] = useLocalStorage("user", { username: "" });
+  const [user, setUser] = useLocalStorage("user", { username: "" });
   const [error, setError] = useState(false);
   const [errorP, setErrorP] = useState({
     error: false,
