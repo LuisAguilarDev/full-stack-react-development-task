@@ -54,7 +54,7 @@ export const SignUp = () => {
   function validatePassword(evt) {
     if (evt.target.name === "password") {
       if (
-        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[a-zA-Z\d@$!%*?&]{8,}$/.test(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
           evt.target.value
         )
       ) {
