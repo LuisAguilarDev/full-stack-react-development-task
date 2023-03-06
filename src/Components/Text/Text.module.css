@@ -44,10 +44,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  padding: 10px;
+  padding: 4px;
   border: white solid 2px;
   width: 150px;
-  margin: 8px;
 }
 
 .cardText {
